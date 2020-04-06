@@ -7093,6 +7093,8 @@ GameObject:
   - component: {fileID: 704408730}
   - component: {fileID: 704408729}
   - component: {fileID: 704408734}
+  - component: {fileID: 704408735}
+  - component: {fileID: 704408731}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -7107,7 +7109,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 704408728}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!124 &704408730
 Behaviour:
   m_ObjectHideFlags: 0
@@ -7116,6 +7118,19 @@ Behaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 704408728}
   m_Enabled: 1
+--- !u!114 &704408731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 704408728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ListenerNumber: -1
 --- !u!20 &704408732
 Camera:
   m_ObjectHideFlags: 0
@@ -7186,6 +7201,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   curveStrength: 0.005
+--- !u!114 &704408735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 704408728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_CameraOutput: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1 &716398981
 GameObject:
   m_ObjectHideFlags: 0
@@ -17845,7 +17891,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -250, y: 112.299805}
+  m_AnchoredPosition: {x: -250, y: 112.30078}
   m_SizeDelta: {x: 125, y: 74.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1470943697
@@ -24046,6 +24092,22 @@ PrefabInstance:
       propertyPath: looping
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 19896046, guid: fb0599b183d2df245a26655842165149, type: 3}
+      propertyPath: InitialModule.startSizeY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19896046, guid: fb0599b183d2df245a26655842165149, type: 3}
+      propertyPath: InitialModule.startSizeZ.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19896046, guid: fb0599b183d2df245a26655842165149, type: 3}
+      propertyPath: InitialModule.startRotationX.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19896046, guid: fb0599b183d2df245a26655842165149, type: 3}
+      propertyPath: InitialModule.startRotationY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb0599b183d2df245a26655842165149, type: 3}
 --- !u!1 &1918110233
@@ -24060,8 +24122,9 @@ GameObject:
   - component: {fileID: 1918110236}
   - component: {fileID: 1918110235}
   - component: {fileID: 1918110237}
-  - component: {fileID: 1918110238}
   - component: {fileID: 1918110239}
+  - component: {fileID: 1918110238}
+  - component: {fileID: 1918110240}
   m_Layer: 0
   m_Name: CountDown
   m_TagString: Untagged
@@ -24150,7 +24213,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1918110233}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 243000013019083220, guid: 3b7e99a6684bf49fa9bad5f4bb585fab,
     type: 2}
@@ -24252,6 +24315,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f9081cdebc0ab340a242bf3bb99d19b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1918110240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918110233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/test
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1918594629
 GameObject:
   m_ObjectHideFlags: 0
