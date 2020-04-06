@@ -1,5 +1,46 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6916340546105976285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/buttonTest
+  m_EditorClassIdentifier: 
+  Path: event:/buttonTest
+  guid: 14f2c2651b3af54e9b0288b8fda78c9b
+  Banks:
+  - {fileID: -1605498010417928274}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 410
+--- !u!114 &-5992804505359233183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD/finalProject/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637217483460688424
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &-2602201536336953612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,6 +56,24 @@ MonoBehaviour:
   Path: FMOD/finalProject/Build/Desktop/Master.bank
   SubDir: 
   lastModified: 637217465893353577
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-1605498010417928274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD/finalProject/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637217485724457135
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -50,15 +109,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 7694629195709707440}
-  - {fileID: -2602201536336953612}
+  - {fileID: -1605498010417928274}
   EditorEvents:
   - {fileID: 4092804057848346794}
+  - {fileID: -6916340546105976285}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -2602201536336953612}
+  - {fileID: -1605498010417928274}
   StringsBanks:
   - {fileID: 7694629195709707440}
-  stringsBankWriteTime: 637217465893423645
+  stringsBankWriteTime: 637217485724507183
   cacheVersion: 3
 --- !u!114 &4092804057848346794
 MonoBehaviour:
@@ -75,7 +135,7 @@ MonoBehaviour:
   Path: event:/test
   guid: ed0c850d528095409ae378db926529de
   Banks:
-  - {fileID: -2602201536336953612}
+  - {fileID: -1605498010417928274}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -97,9 +157,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: FMOD/finalProject/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637217465893423645
+  lastModified: 637217485724507183
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 730
+    Value: 782
   Exists: 1
