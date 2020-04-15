@@ -11680,7 +11680,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CollisionTag: 
-  Event: event:/buttonTest
+  Event: event:/UI/Button-Pressed
   PlayEvent: 0
   StopEvent: 0
   AllowFadeout: 1
