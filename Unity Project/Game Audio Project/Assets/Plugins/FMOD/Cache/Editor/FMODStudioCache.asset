@@ -1,5 +1,28 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9206732871624136429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Pickups/Currency
+  m_EditorClassIdentifier: 
+  Path: event:/Pickups/Currency
+  guid: ba15cd02d58bb24a9744e12cfcb8966a
+  Banks:
+  - {fileID: 5856857285197026841}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 200
 --- !u!114 &-8107454061379573120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17,7 +40,7 @@ MonoBehaviour:
   lastModified: 637225557799262103
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &-8047166224493824732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33,7 +56,7 @@ MonoBehaviour:
   Path: event:/Pickups/Auras/Magnet
   guid: a7a81344b8c5b84cb72b2e3cf48dd144
   Banks:
-  - {fileID: -8107454061379573120}
+  - {fileID: 5856857285197026841}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -56,14 +79,32 @@ MonoBehaviour:
   Path: event:/UI/Button-Pressed
   guid: 90f8738f15cf59469174edaabbf80a95
   Banks:
-  - {fileID: -8107454061379573120}
+  - {fileID: 5856857285197026841}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 190
+  Length: 78
+--- !u!114 &-7025400663457394601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD/finalProject/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637229544467740559
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &-6916340546105976285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101,7 +142,7 @@ MonoBehaviour:
   Path: event:/Pickups/Auras/Invincibility
   guid: 467f68764287fa4ca17c74afd35b43ad
   Banks:
-  - {fileID: -8107454061379573120}
+  - {fileID: 5856857285197026841}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -142,7 +183,7 @@ MonoBehaviour:
   Path: event:/Enemies/Dog/Dog-Hit
   guid: 625e18564f2f554ab5cd8991fe38fa52
   Banks:
-  - {fileID: -8107454061379573120}
+  - {fileID: 5856857285197026841}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -165,14 +206,14 @@ MonoBehaviour:
   Path: event:/UI/Countdown
   guid: be953154c928174b8f7bfc0536c57f1b
   Banks:
-  - {fileID: -8107454061379573120}
+  - {fileID: 5856857285197026841}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 4411
+  Length: 4311
 --- !u!114 &-5280074526944790482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -188,7 +229,7 @@ MonoBehaviour:
   Path: event:/Enemies/Dog/Dog-Roam
   guid: 2fc8bf5b7b1eb04cb76052dbfbb50b97
   Banks:
-  - {fileID: -8107454061379573120}
+  - {fileID: 5856857285197026841}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -211,7 +252,7 @@ MonoBehaviour:
   Path: event:/Enemies/Mouse/Mouse-Roam
   guid: cf2b6ea5def5454190841b45bbb3e2ea
   Banks:
-  - {fileID: -8107454061379573120}
+  - {fileID: 5856857285197026841}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -234,7 +275,7 @@ MonoBehaviour:
   Path: event:/Pickups/Auras/Multiplier
   guid: f8a44351070bd24aa4993c61eaa44a11
   Banks:
-  - {fileID: -8107454061379573120}
+  - {fileID: 5856857285197026841}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -257,7 +298,7 @@ MonoBehaviour:
   Path: event:/Player/Raccoon/Raccoon-jump
   guid: 26caee656d5d3b43988da63d703da985
   Banks:
-  - {fileID: -8107454061379573120}
+  - {fileID: 5856857285197026841}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -301,6 +342,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-2471616593969525694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD/finalProject/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637229549389655508
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &-1605498010417928274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -316,6 +375,42 @@ MonoBehaviour:
   Path: FMOD/finalProject/Build/Desktop/Master.bank
   SubDir: 
   lastModified: 637217485724457135
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-1088280790381930913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD/finalProject/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637229549086634523
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-995412761902228262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD/finalProject/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637229549634733580
   LoadResult: 0
   FileSizes: []
   Exists: 0
@@ -351,7 +446,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 7694629195709707440}
-  - {fileID: -8107454061379573120}
+  - {fileID: 5856857285197026841}
   EditorEvents:
   - {fileID: 4558355167990359874}
   - {fileID: 5240516161281406389}
@@ -375,12 +470,13 @@ MonoBehaviour:
   - {fileID: 2265651473124735511}
   - {fileID: 7996293299248166575}
   - {fileID: -5015651200952331480}
+  - {fileID: -9206732871624136429}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -8107454061379573120}
+  - {fileID: 5856857285197026841}
   StringsBanks:
   - {fileID: 7694629195709707440}
-  stringsBankWriteTime: 637225557799542358
+  stringsBankWriteTime: 637229613413931847
   cacheVersion: 3
 --- !u!114 &70507985046713943
 MonoBehaviour:
@@ -397,7 +493,7 @@ MonoBehaviour:
   Path: event:/Player/Cat/Cat-Jump
   guid: 40b4026bf2ca864e962a78deee18929e
   Banks:
-  - {fileID: -8107454061379573120}
+  - {fileID: 5856857285197026841}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -420,7 +516,7 @@ MonoBehaviour:
   Path: event:/Player/Slide
   guid: df51c3efe6fc5648bdb8f45f83afdd8f
   Banks:
-  - {fileID: -8107454061379573120}
+  - {fileID: 5856857285197026841}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -443,7 +539,7 @@ MonoBehaviour:
   Path: event:/Player/Raccoon/Raccoon-death
   guid: 7a4bd04cc721044bb3eb72f797838aec
   Banks:
-  - {fileID: -8107454061379573120}
+  - {fileID: 5856857285197026841}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -466,7 +562,7 @@ MonoBehaviour:
   Path: event:/Pickups/Powerup-Start
   guid: 8c9744b2adaf9341867e72cc5f7442ff
   Banks:
-  - {fileID: -8107454061379573120}
+  - {fileID: 5856857285197026841}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -489,7 +585,7 @@ MonoBehaviour:
   Path: event:/UI/Start-Button-Pressed
   guid: 1deadf98478a4d408c4af6ebdd196574
   Banks:
-  - {fileID: -8107454061379573120}
+  - {fileID: 5856857285197026841}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -534,7 +630,7 @@ MonoBehaviour:
   Path: event:/Obstacles/Garbage-Can
   guid: 03e7476fc93a254b9c66779a241c6009
   Banks:
-  - {fileID: -8107454061379573120}
+  - {fileID: 5856857285197026841}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -557,7 +653,7 @@ MonoBehaviour:
   Path: event:/Testing/buttonTest
   guid: 14f2c2651b3af54e9b0288b8fda78c9b
   Banks:
-  - {fileID: -8107454061379573120}
+  - {fileID: 5856857285197026841}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -565,6 +661,60 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 410
+--- !u!114 &5466107875180752102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD/finalProject/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637229576537586594
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &5856857285197026841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD/finalProject/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637229613413861784
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &5892802167487709087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD/finalProject/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637229542038298158
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &6387685480119139371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -580,7 +730,7 @@ MonoBehaviour:
   Path: event:/Obstacles/Roadblock
   guid: 961c5ff3bab5f34697d156a9560584aa
   Banks:
-  - {fileID: -8107454061379573120}
+  - {fileID: 5856857285197026841}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -588,6 +738,24 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 698
+--- !u!114 &7126250286754762077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD/finalProject/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637229548727732844
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &7694629195709707440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -602,11 +770,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: FMOD/finalProject/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637225557799542358
+  lastModified: 637229613413931847
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1820
+    Value: 1858
   Exists: 1
 --- !u!114 &7996293299248166575
 MonoBehaviour:
@@ -623,7 +791,7 @@ MonoBehaviour:
   Path: event:/Testing/test
   guid: ed0c850d528095409ae378db926529de
   Banks:
-  - {fileID: -8107454061379573120}
+  - {fileID: 5856857285197026841}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -646,7 +814,7 @@ MonoBehaviour:
   Path: event:/Obstacles/Traffic-Cone
   guid: 7663e05df01590409e8bbaae106eb0a6
   Banks:
-  - {fileID: -8107454061379573120}
+  - {fileID: 5856857285197026841}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -669,7 +837,7 @@ MonoBehaviour:
   Path: event:/Enemies/Mouse/Mouse-Hit
   guid: 9c248e5c77435147a223ab07a0c251a8
   Banks:
-  - {fileID: -8107454061379573120}
+  - {fileID: 5856857285197026841}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -692,7 +860,7 @@ MonoBehaviour:
   Path: event:/Player/Cat/Cat-death
   guid: baa11f8b8e4f5040b5703fcc9a3650a5
   Banks:
-  - {fileID: -8107454061379573120}
+  - {fileID: 5856857285197026841}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -715,7 +883,7 @@ MonoBehaviour:
   Path: event:/Pickups/Powerup-End
   guid: b3747f3c690b14469234ab6b57997c00
   Banks:
-  - {fileID: -8107454061379573120}
+  - {fileID: 5856857285197026841}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1

@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using FMODUnity;
 
 /// <summary>
 /// This script is the base class for implemented obstacles.
@@ -9,6 +10,7 @@ using UnityEngine;
 public abstract class Obstacle : MonoBehaviour
 {
 	public AudioClip impactedSound;
+	public StudioEventEmitter audioSource;
 
     public virtual void Setup() {}
 
@@ -17,18 +19,19 @@ public abstract class Obstacle : MonoBehaviour
 	public virtual void Impacted()
 	{
 		Animation anim = GetComponentInChildren<Animation>();
-		AudioSource audioSource = GetComponent<AudioSource>();
+		//AudioSource audioSource = GetComponent<AudioSource>();
+		//StudioEventEmitter audioSource = GetComponent
 
 		if (anim != null)
 		{
 			anim.Play();
 		}
 
-		if (audioSource != null && impactedSound != null)
+		if (audioSource != null)// && impactedSound != null)
 		{
 			audioSource.Stop();
-			audioSource.loop = false;
-			audioSource.clip = impactedSound;
+			//audioSource.loop = false;
+			//audioSource.clip = impactedSound;
 			audioSource.Play();
 		}
 	}

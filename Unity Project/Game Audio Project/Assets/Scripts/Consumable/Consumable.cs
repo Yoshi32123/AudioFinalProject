@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.AddressableAssets;
+using FMODUnity;
 
 /// <summary>
 /// Defines a consumable (called "power up" in game). Each consumable is derived from this and implements its functions.

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{935cc7b3-366a-4276-987f-e9e26dddea67}">
+		<property name="assetPath">
+			<value>Currency-004.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.12126984126984126</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{315963ed-a24f-4baf-a731-406203f371c3}</destination>
+		</relationship>
+	</object>
+</objects>

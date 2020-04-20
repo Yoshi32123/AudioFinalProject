@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.AddressableAssets;
+using FMODUnity;
 
 /// <summary>
 /// Handles everything related to the collider of the character. This is actually an empty game object, NOT on the character prefab
@@ -32,6 +33,7 @@ public class CharacterCollider : MonoBehaviour
 
 	[Header("Sound")]
 	public AudioClip coinSound;
+	public StudioEventEmitter emitter;
 	public AudioClip premiumSound;
 
     public DeathEvent deathData { get { return m_DeathData; } }
@@ -120,6 +122,7 @@ public class CharacterCollider : MonoBehaviour
                 PlayerData.instance.coins += 1;
 				controller.coins += 1;
 				m_Audio.PlayOneShot(coinSound);
+				emitter.Play();
             }
         }
         else if(c.gameObject.layer == k_ObstacleLayerIndex)
