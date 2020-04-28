@@ -63,6 +63,7 @@ MonoBehaviour:
   duration: 15
   icon: {fileID: 21300028, guid: e1a536f74c7ef384a8d7132148ace0c8, type: 3}
   activatedSound: {fileID: 0}
+  activateEmitter: {fileID: 2469645965234331029}
   ActivatedParticleReference:
     m_AssetGUID: 8cede34fb26a722408198e0d27628ae9
   canBeSpawned: 1

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.AddressableAssets;
+using FMODUnity;
 
 /// <summary>
 /// Handle everything related to controlling the character. Interact with both the Character (visual, animation) and CharacterCollider
@@ -41,6 +42,8 @@ public class CharacterInputController : MonoBehaviour
 	public AudioClip slideSound;
 	public AudioClip powerUpUseSound;
 	public AudioSource powerupSource;
+	public StudioEventEmitter slideEmitter;
+	public StudioEventEmitter powerupEmitter;
 
     [HideInInspector] public int currentTutorialLevel;
     [HideInInspector] public bool tutorialWaitingForValidation;
@@ -360,7 +363,8 @@ public class CharacterInputController : MonoBehaviour
 
 			character.animator.SetFloat(s_JumpingSpeedHash, animSpeed);
 			character.animator.SetBool(s_SlidingHash, true);
-			m_Audio.PlayOneShot(slideSound);
+			//m_Audio.PlayOneShot(slideSound);
+			slideEmitter.Play();
 			m_Sliding = true;
 
 			characterCollider.Slide(true);

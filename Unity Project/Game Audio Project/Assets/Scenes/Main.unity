@@ -6762,6 +6762,7 @@ GameObject:
   - component: {fileID: 663631922}
   - component: {fileID: 663631921}
   - component: {fileID: 663631920}
+  - component: {fileID: 663631923}
   m_Layer: 0
   m_Name: Resume
   m_TagString: Untagged
@@ -6843,6 +6844,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 663631923}
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &663631921
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6879,6 +6891,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 663631918}
   m_CullTransparentMesh: 0
+--- !u!114 &663631923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 663631918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/UI/Button-Pressed
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &681311097
 GameObject:
   m_ObjectHideFlags: 0
@@ -9552,6 +9587,7 @@ GameObject:
   - component: {fileID: 878427080}
   - component: {fileID: 878427079}
   - component: {fileID: 878427078}
+  - component: {fileID: 878427081}
   m_Layer: 0
   m_Name: pauseButton
   m_TagString: Untagged
@@ -9632,6 +9668,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 878427081}
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &878427079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9668,6 +9715,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 878427076}
   m_CullTransparentMesh: 0
+--- !u!114 &878427081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 878427076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/UI/Button-Pressed
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!224 &882530529 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224000012279668024, guid: ac361d43768a861498da8046b83b94f5,
@@ -13817,6 +13887,7 @@ GameObject:
   - component: {fileID: 1144878497}
   - component: {fileID: 1144878499}
   - component: {fileID: 1144878500}
+  - component: {fileID: 1144878501}
   m_Layer: 0
   m_Name: CharacterSlot
   m_TagString: Untagged
@@ -13887,7 +13958,7 @@ MonoBehaviour:
   controller: {fileID: 2094493432}
   koParticle: {fileID: 2038194883}
   coinSound: {fileID: 8300000, guid: 62c15b4aac9d60e4a963f4f55d31e706, type: 3}
-  emitter: {fileID: 0}
+  emitter: {fileID: 1144878501}
   premiumSound: {fileID: 8300000, guid: 553f1d03da54003479f6ff63d3155919, type: 3}
   magnetCoins: []
 --- !u!82 &1144878500
@@ -13897,7 +13968,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1144878495}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 243000013519457790, guid: 3b7e99a6684bf49fa9bad5f4bb585fab,
     type: 2}
@@ -13987,6 +14058,29 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &1144878501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1144878495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Pickups/Currency
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &1151564601
 GameObject:
   m_ObjectHideFlags: 0
@@ -16330,6 +16424,7 @@ GameObject:
   - component: {fileID: 1309406007}
   - component: {fileID: 1309406006}
   - component: {fileID: 1309406005}
+  - component: {fileID: 1309406008}
   m_Layer: 0
   m_Name: Exit
   m_TagString: Untagged
@@ -16411,6 +16506,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1309406008}
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1309406006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16447,6 +16553,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1309406003}
   m_CullTransparentMesh: 0
+--- !u!114 &1309406008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1309406003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/UI/Button-Pressed
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &1312192089
 GameObject:
   m_ObjectHideFlags: 0
@@ -17383,6 +17512,7 @@ GameObject:
   - component: {fileID: 1393864686}
   - component: {fileID: 1393864685}
   - component: {fileID: 1393864684}
+  - component: {fileID: 1393864687}
   m_Layer: 5
   m_Name: StartButton
   m_TagString: Untagged
@@ -17464,6 +17594,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1393864687}
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1393864685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17500,6 +17641,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1393864682}
   m_CullTransparentMesh: 0
+--- !u!114 &1393864687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1393864682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/UI/Button-Pressed
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &1394215946
 GameObject:
   m_ObjectHideFlags: 0
@@ -24057,6 +24221,7 @@ GameObject:
   - component: {fileID: 1841838546}
   - component: {fileID: 1841838545}
   - component: {fileID: 1841838548}
+  - component: {fileID: 1841838549}
   m_Layer: 5
   m_Name: RunButton
   m_TagString: Untagged
@@ -24140,7 +24305,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1841838548}
+      - m_Target: {fileID: 1841838549}
         m_MethodName: Play
         m_Mode: 1
         m_Arguments:
@@ -24196,7 +24361,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1841838543}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 243000010075535018, guid: 3b7e99a6684bf49fa9bad5f4bb585fab,
     type: 2}
@@ -24286,6 +24451,29 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &1841838549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1841838543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/UI/Button-Pressed
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &1860930932
 GameObject:
   m_ObjectHideFlags: 0
@@ -24803,6 +24991,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f9081cdebc0ab340a242bf3bb99d19b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  source: {fileID: 1918110240}
 --- !u!114 &1918110240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24817,7 +25006,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CollisionTag: 
   Event: event:/UI/Countdown
-  PlayEvent: 1
+  PlayEvent: 0
   StopEvent: 0
   AllowFadeout: 1
   TriggerOnce: 0
@@ -30897,6 +31086,8 @@ GameObject:
   - component: {fileID: 2094493432}
   - component: {fileID: 2094493434}
   - component: {fileID: 2094493435}
+  - component: {fileID: 2094493437}
+  - component: {fileID: 2094493436}
   m_Layer: 0
   m_Name: PlayerPivot
   m_TagString: Untagged
@@ -30929,6 +31120,8 @@ MonoBehaviour:
   slideSound: {fileID: 8300000, guid: febd5a5a8b245774fbfa9f0bef51e0b6, type: 3}
   powerUpUseSound: {fileID: 8300000, guid: defdb98bfddc24748aead1ce73ba7972, type: 3}
   powerupSource: {fileID: 2094493435}
+  slideEmitter: {fileID: 2094493437}
+  powerupEmitter: {fileID: 2094493436}
   currentTutorialLevel: 0
   tutorialWaitingForValidation: 0
 --- !u!4 &2094493433
@@ -30955,7 +31148,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2094493431}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 243000013019083220, guid: 3b7e99a6684bf49fa9bad5f4bb585fab,
     type: 2}
@@ -31052,7 +31245,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2094493431}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 243000013519457790, guid: 3b7e99a6684bf49fa9bad5f4bb585fab,
     type: 2}
@@ -31142,6 +31335,52 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &2094493436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2094493431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Pickups/Powerup-Start
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
+--- !u!114 &2094493437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2094493431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Player/Slide
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &2102327772
 GameObject:
   m_ObjectHideFlags: 0

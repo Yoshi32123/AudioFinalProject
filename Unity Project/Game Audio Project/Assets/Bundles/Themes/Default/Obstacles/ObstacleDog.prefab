@@ -51,11 +51,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   impactedSound: {fileID: 8300000, guid: a9ca43e15a6013b43af5e7c96fe909f5, type: 3}
-  audioSource: {fileID: 8157552818806755805}
+  impactEmitter: {fileID: -1695782030533164443}
   animator: {fileID: 95000012542064004}
   movingSound:
   - {fileID: 8300000, guid: a274514c3e79a214192d637691738dea, type: 3}
   - {fileID: 8300000, guid: fa9008d188552c84b99adb204f504fbf, type: 3}
+  roamEmitter: {fileID: 8157552818806755805}
 --- !u!136 &136000012872324984
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -194,7 +195,7 @@ MonoBehaviour:
   CollisionTag: 
   Event: event:/Enemies/Dog/Dog-Roam
   PlayEvent: 0
-  StopEvent: 0
+  StopEvent: 2
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0

@@ -114,14 +114,15 @@ public class CharacterCollider : MonoBehaviour
 				Addressables.ReleaseInstance(c.gameObject);
                 PlayerData.instance.premium += 1;
                 controller.premium += 1;
-				m_Audio.PlayOneShot(premiumSound);
+				//m_Audio.PlayOneShot(premiumSound);
+				emitter.Play();
 			}
             else
             {
 				Coin.coinPool.Free(c.gameObject);
                 PlayerData.instance.coins += 1;
 				controller.coins += 1;
-				m_Audio.PlayOneShot(coinSound);
+				//m_Audio.PlayOneShot(coinSound);
 				emitter.Play();
             }
         }
@@ -158,13 +159,14 @@ public class CharacterCollider : MonoBehaviour
 
 			if (controller.currentLife > 0)
 			{
-				m_Audio.PlayOneShot(controller.character.hitSound);
+				//m_Audio.PlayOneShot(controller.character.hitSound);
                 SetInvincible ();
 			}
             // The collision killed the player, record all data to analytics.
 			else
 			{
-				m_Audio.PlayOneShot(controller.character.deathSound);
+				//m_Audio.PlayOneShot(controller.character.deathSound);
+				controller.character.deathEmitter.Play();
 
 				m_DeathData.character = controller.character.characterName;
 				m_DeathData.themeUsed = controller.trackManager.currentTheme.themeName;

@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
+using FMODUnity;
 
 public class PatrollingObstacle : Obstacle
 {
@@ -16,6 +17,7 @@ public class PatrollingObstacle : Obstacle
 	public Animator animator;
 
 	public AudioClip[] patrollingSound;
+	public StudioEventEmitter patrolEmitter;
 
 	protected TrackSegment m_Segement;
 
@@ -63,6 +65,8 @@ public class PatrollingObstacle : Obstacle
 			m_Audio.loop = true;
 			m_Audio.clip = patrollingSound[Random.Range(0,patrollingSound.Length)];
 			m_Audio.Play();
+
+			patrolEmitter.Play();
 		}
 
 		m_OriginalPosition = transform.localPosition + transform.right * m_Segement.manager.laneOffset;
@@ -86,10 +90,12 @@ public class PatrollingObstacle : Obstacle
 	{
 	    m_isMoving = false;
 		base.Impacted();
+		patrolEmitter.Stop();
 
 		if (animator != null)
 		{
 			animator.SetTrigger(s_DeadHash);
+			
 		}
 	}
 

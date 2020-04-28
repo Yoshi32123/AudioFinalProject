@@ -10,7 +10,7 @@ using FMODUnity;
 public abstract class Obstacle : MonoBehaviour
 {
 	public AudioClip impactedSound;
-	public StudioEventEmitter audioSource;
+	public StudioEventEmitter impactEmitter;
 
     public virtual void Setup() {}
 
@@ -27,12 +27,6 @@ public abstract class Obstacle : MonoBehaviour
 			anim.Play();
 		}
 
-		if (audioSource != null)// && impactedSound != null)
-		{
-			audioSource.Stop();
-			//audioSource.loop = false;
-			//audioSource.clip = impactedSound;
-			audioSource.Play();
-		}
+		impactEmitter.Play();
 	}
 }

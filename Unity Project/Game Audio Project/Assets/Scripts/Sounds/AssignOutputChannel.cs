@@ -11,29 +11,29 @@ public class AssignOutputChannel : MonoBehaviour
 
     private void Awake()
     {
-        AudioSource source = GetComponent<AudioSource>();
+        //AudioSource source = GetComponent<AudioSource>();
 
-        if (source == null)
-        {
-            Debug.LogError("That object don't have any audio source, can't change it's output", gameObject);
-            Destroy(this);
-            return;
-        }
+        //if (source == null)
+        //{
+        //    Debug.LogError("That object don't have any audio source, can't change it's output", gameObject);
+        //    Destroy(this);
+        //    return;
+        //}
 
-        AudioMixerGroup[] groups = MusicPlayer.instance.mixer.FindMatchingGroups(mixerGroup);
+        //AudioMixerGroup[] groups = MusicPlayer.instance.mixer.FindMatchingGroups(mixerGroup);
 
-        if(groups.Length == 0)
-        {
-            Debug.LogErrorFormat(gameObject, "Could not find any group called {0}", mixerGroup);
-        }
+        //if(groups.Length == 0)
+        //{
+        //    Debug.LogErrorFormat(gameObject, "Could not find any group called {0}", mixerGroup);
+        //}
 
-        for(int i = 0; i < groups.Length; ++i)
-        {
-            if (groups[i].name == mixerGroup)
-            {
-                source.outputAudioMixerGroup = groups[i];
-                break;
-            }
-        }
+        //for(int i = 0; i < groups.Length; ++i)
+        //{
+        //    if (groups[i].name == mixerGroup)
+        //    {
+        //        source.outputAudioMixerGroup = groups[i];
+        //        break;
+        //    }
+        //}
     }
 }

@@ -22,6 +22,7 @@ public abstract class Consumable : MonoBehaviour
 
     public Sprite icon;
 	public AudioClip activatedSound;
+    public StudioEventEmitter activateEmitter;
     //public ParticleSystem activatedParticle;
     public AssetReference ActivatedParticleReference;
     public bool canBeSpawned = true;
@@ -56,10 +57,11 @@ public abstract class Consumable : MonoBehaviour
     {
         m_SinceStart = 0;
 
-		if (activatedSound != null)
+		if (activateEmitter != null)
 		{
-			c.powerupSource.clip = activatedSound;
-			c.powerupSource.Play();
+            activateEmitter.Play();
+			//c.powerupSource.clip = activatedSound;
+			//c.powerupSource.Play();
 		}
 
         if(ActivatedParticleReference != null)
@@ -101,8 +103,7 @@ public abstract class Consumable : MonoBehaviour
                 Addressables.ReleaseInstance(m_ParticleSpawned.gameObject);
         }
 
-        if (activatedSound != null && c.powerupSource.clip == activatedSound)
-            c.powerupSource.Stop(); //if this one the one using the audio source stop it
+        activateEmitter.Stop();
 
         for (int i = 0; i < c.consumables.Count; ++i)
         {

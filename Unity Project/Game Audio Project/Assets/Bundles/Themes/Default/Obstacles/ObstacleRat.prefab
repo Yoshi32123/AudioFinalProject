@@ -145,13 +145,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   impactedSound: {fileID: 8300000, guid: 90690b03aaccb6e4a96d2cdb757b3b44, type: 3}
-  audioSource: {fileID: -7143684820212264714}
+  impactEmitter: {fileID: 7318623418812131499}
   minTime: 2
   maxTime: 5
   animator: {fileID: 95000010306431478}
   patrollingSound:
   - {fileID: 8300000, guid: 692deea899152264f8419135ceefafcb, type: 3}
   - {fileID: 8300000, guid: a683c76e59dd6b04a9420526560624a0, type: 3}
+  patrolEmitter: {fileID: -7143684820212264714}
 --- !u!65 &65000013118866804
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -288,7 +289,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CollisionTag: 
   Event: event:/Enemies/Mouse/Mouse-Roam
-  PlayEvent: 1
+  PlayEvent: 0
   StopEvent: 2
   AllowFadeout: 1
   TriggerOnce: 0
@@ -311,7 +312,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CollisionTag: 
   Event: event:/Enemies/Mouse/Mouse-Hit
-  PlayEvent: 5
+  PlayEvent: 0
   StopEvent: 0
   AllowFadeout: 1
   TriggerOnce: 0

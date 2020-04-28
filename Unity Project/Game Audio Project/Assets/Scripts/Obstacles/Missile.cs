@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement;
 using UnityEngine.ResourceManagement.AsyncOperations;
+using FMODUnity;
 
 /// <summary>
 /// Obstacle that starts moving forward in its lane when the player is close enough.
@@ -14,6 +15,7 @@ public class Missile : Obstacle
 
 	public Animator animator;
 	public AudioClip[] movingSound;
+	public StudioEventEmitter roamEmitter;
 
 	protected TrackSegment m_OwnSegement;
 
@@ -70,6 +72,7 @@ public class Missile : Obstacle
     public override void Impacted()
 	{
 		base.Impacted();
+		roamEmitter.Stop();
 
 		if (animator != null)
 		{
@@ -94,11 +97,12 @@ public class Missile : Obstacle
 						animator.SetTrigger(s_RunHash);
 					}
 
-					if(m_Audio != null && movingSound != null && movingSound.Length > 0)
+					if(roamEmitter != null && movingSound.Length > 0)
 					{
-						m_Audio.clip = movingSound[Random.Range(0, movingSound.Length)];
-						m_Audio.Play();
-						m_Audio.loop = true;
+						roamEmitter.Play();
+						//m_Audio.clip = movingSound[Random.Range(0, movingSound.Length)];
+						//m_Audio.Play();
+						//m_Audio.loop = true;
 					}
 
 					m_IsMoving = true;

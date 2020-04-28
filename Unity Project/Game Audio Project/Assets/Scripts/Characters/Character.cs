@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System;
+using FMODUnity;
 
 /// <summary>
 /// Mainly used as a data container to define a character. This script is attached to the prefab
@@ -20,6 +21,9 @@ public class Character : MonoBehaviour
 	public AudioClip jumpSound;
 	public AudioClip hitSound;
 	public AudioClip deathSound;
+
+    public StudioEventEmitter jumpEmitter;
+    public StudioEventEmitter deathEmitter;
 
     // Called by the game when an accessory changes, enable/disable the accessories children objects accordingly
     // a value of -1 as parameter disables all accessory.
