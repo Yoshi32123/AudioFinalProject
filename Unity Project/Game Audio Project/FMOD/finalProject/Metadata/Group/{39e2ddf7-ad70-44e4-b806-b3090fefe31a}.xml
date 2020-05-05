@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="MixerGroup" id="{39e2ddf7-ad70-44e4-b806-b3090fefe31a}">
+		<property name="name">
+			<value>Auras</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{ffa04a63-9eb3-4217-b539-b0d5ff3c0202}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{d0a171d0-b9e5-40ea-957d-95f0fef6cb78}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{6fbc0d07-5012-4839-80aa-6045a2dd133d}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{ffa04a63-9eb3-4217-b539-b0d5ff3c0202}">
+		<relationship name="effects">
+			<destination>{e34bd11c-2b17-4429-85ce-632e7f549fa7}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{d0a171d0-b9e5-40ea-957d-95f0fef6cb78}" />
+	<object class="MixerBusFader" id="{e34bd11c-2b17-4429-85ce-632e7f549fa7}" />
+</objects>

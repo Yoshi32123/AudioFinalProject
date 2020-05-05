@@ -332,7 +332,8 @@ public class CharacterInputController : MonoBehaviour
 
             character.animator.SetFloat(s_JumpingSpeedHash, animSpeed);
             character.animator.SetBool(s_JumpingHash, true);
-			m_Audio.PlayOneShot(character.jumpSound);
+			//m_Audio.PlayOneShot(character.jumpSound);
+			character.jumpEmitter.Play();
 			m_Jumping = true;
         }
     }

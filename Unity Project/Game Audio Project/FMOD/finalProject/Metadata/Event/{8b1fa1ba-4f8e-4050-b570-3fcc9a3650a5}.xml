@@ -5,7 +5,7 @@
 			<value>Cat-death</value>
 		</property>
 		<property name="outputFormat">
-			<value>0</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{f6199f2b-b5e4-46c5-8f07-cb8894458831}</destination>
@@ -53,17 +53,24 @@
 			<destination>{df5c9d55-ca07-46ad-8693-dd62f099fa85}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{94bb8541-d0f4-4d39-80ec-f3fd1d85e2ee}</destination>
+			<destination>{01d5fb55-445d-4b07-8af4-6712325c4843}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{02617fed-8c57-490d-ba9f-0d6fbed649c7}" />
 	<object class="MarkerTrack" id="{054a3466-1369-4d46-9536-f8b1a13e1853}" />
 	<object class="GroupTrack" id="{2b3471d8-8f4b-4087-82fc-a81bbb1179de}">
+		<relationship name="modules">
+			<destination>{4592229c-e7b4-419c-99c9-a68ff7acf214}</destination>
+		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{1a6df6f6-ff17-4bef-9f52-aab4a002d093}</destination>
 		</relationship>
 	</object>
-	<object class="Timeline" id="{10557422-8e4d-4996-b445-b29a4b48c569}" />
+	<object class="Timeline" id="{10557422-8e4d-4996-b445-b29a4b48c569}">
+		<relationship name="modules">
+			<destination>{4592229c-e7b4-419c-99c9-a68ff7acf214}</destination>
+		</relationship>
+	</object>
 	<object class="EventMixerMaster" id="{7ca596d4-64a4-48de-93f3-48496b2ede41}">
 		<relationship name="effectChain">
 			<destination>{1c3dca83-09f7-4fc4-8929-852758d52dcb}</destination>
@@ -81,6 +88,17 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{df5c9d55-ca07-46ad-8693-dd62f099fa85}" />
+	<object class="SingleSound" id="{4592229c-e7b4-419c-99c9-a68ff7acf214}">
+		<property name="length">
+			<value>0.82215419501133791</value>
+		</property>
+		<property name="pitch">
+			<value>1.80000007</value>
+		</property>
+		<relationship name="audioFile">
+			<destination>{d5ceb9d2-28fe-41f7-83d3-88c069a6577c}</destination>
+		</relationship>
+	</object>
 	<object class="EventMixerGroup" id="{1a6df6f6-ff17-4bef-9f52-aab4a002d093}">
 		<property name="name">
 			<value>Audio 1</value>

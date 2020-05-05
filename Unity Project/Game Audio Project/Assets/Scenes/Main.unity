@@ -1611,6 +1611,16 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 82094754644436538, guid: fc9855a6b2a67364ebc0db28e7bbc98b,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114322282601092784, guid: fc9855a6b2a67364ebc0db28e7bbc98b,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc9855a6b2a67364ebc0db28e7bbc98b, type: 3}
 --- !u!1 &170413742
@@ -8674,6 +8684,25 @@ RectTransform:
   m_AnchoredPosition: {x: -0.000011444, y: 61}
   m_SizeDelta: {x: 386.2, y: 77.5}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &838492410 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1421208009449374, guid: fc9855a6b2a67364ebc0db28e7bbc98b,
+    type: 3}
+  m_PrefabInstance: {fileID: 162371111}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &838492414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 838492410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64fadf3053b259c48b6a20c7bbbbf0e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  music: event:/Music/Music
 --- !u!1 &846984643
 GameObject:
   m_ObjectHideFlags: 0
@@ -9951,6 +9980,17 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 919934261}
         m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 838492414}
+        m_MethodName: DeathToMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -13960,6 +14000,7 @@ MonoBehaviour:
   coinSound: {fileID: 8300000, guid: 62c15b4aac9d60e4a963f4f55d31e706, type: 3}
   emitter: {fileID: 1144878501}
   premiumSound: {fileID: 8300000, guid: 553f1d03da54003479f6ff63d3155919, type: 3}
+  musicControl: {fileID: 838492414}
   magnetCoins: []
 --- !u!82 &1144878500
 AudioSource:
@@ -16517,6 +16558,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 838492414}
+        m_MethodName: GameToMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1309406006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17596,6 +17648,17 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1393864687}
         m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 838492414}
+        m_MethodName: MenuStart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -22594,6 +22657,7 @@ GameObject:
   - component: {fileID: 1784961615}
   - component: {fileID: 1784961614}
   - component: {fileID: 1784961613}
+  - component: {fileID: 1784961616}
   m_Layer: 0
   m_Name: Premium Button
   m_TagString: Untagged
@@ -22676,6 +22740,28 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1784961616}
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 838492414}
+        m_MethodName: DeathToGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1784961614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22712,6 +22798,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1784961611}
   m_CullTransparentMesh: 0
+--- !u!114 &1784961616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1784961611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/UI/Button-Pressed
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &1792612850
 GameObject:
   m_ObjectHideFlags: 0
@@ -24316,6 +24425,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 838492414}
+        m_MethodName: DeathToGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1841838546
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25304,12 +25424,14 @@ MonoBehaviour:
   maxSpeed: 30
   speedStep: 4
   laneOffset: 1.5
+  musicControl: {fileID: 838492414}
   invincible: 0
   consumableDatabase: {fileID: 11400000, guid: 5d316f81231c9964dadda0b50ca7ae6b, type: 2}
   skyMeshFilter: {fileID: 201362454}
   parallaxRoot: {fileID: 1617204952}
   parallaxRatio: 0.8
   tutorialThemeData: {fileID: 11400000, guid: d2594127ff496284399060a56ff8ad68, type: 2}
+  m_Speed: 0
 --- !u!4 &1958487561
 Transform:
   m_ObjectHideFlags: 0
@@ -25459,6 +25581,7 @@ MonoBehaviour:
   masterSlider: {fileID: 1872918132}
   musicSlider: {fileID: 1826149887}
   masterSFXSlider: {fileID: 1260468401}
+  musicControl: {fileID: 838492414}
   loadoutState: {fileID: 869760749}
   confirmationPopup: {fileID: 1918594631}
 --- !u!114 &1971115932

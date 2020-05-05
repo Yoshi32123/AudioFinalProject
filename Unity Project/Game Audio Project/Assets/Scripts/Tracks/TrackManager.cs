@@ -44,6 +44,7 @@ public class TrackManager : MonoBehaviour
     public float maxSpeed = 10.0f;
     public int speedStep = 4;
     public float laneOffset = 1.0f;
+    public MusicControl musicControl;
 
     public bool invincible = false;
 
@@ -94,7 +95,7 @@ public class TrackManager : MonoBehaviour
     protected float m_CurrentSegmentDistance;
     protected float m_TotalWorldDistance;
     protected bool m_IsMoving;
-    protected float m_Speed;
+    public float m_Speed;
 
     protected float m_TimeSincePowerup;     // The higher it goes, the higher the chance of spawning one
     protected float m_TimeSinceLastPremium;
@@ -468,7 +469,12 @@ public class TrackManager : MonoBehaviour
             PlayerData.instance.UpdateMissions(this);
         }
 
-        MusicPlayer.instance.UpdateVolumes(speedRatio);
+        //MusicPlayer.instance.UpdateVolumes(speedRatio);
+        if (m_Speed < 15.0f){ musicControl.SpeedChanger(0.0f); }
+        else if (m_Speed < 20.0f) { musicControl.SpeedChanger(1.0f); }
+        else if (m_Speed < 25.0) { musicControl.SpeedChanger(2.0f); }
+        else if (m_Speed < 30.0) { musicControl.SpeedChanger(3.0f); }
+        else { musicControl.SpeedChanger(4.0f); }
     }
 
     public void PowerupSpawnUpdate()

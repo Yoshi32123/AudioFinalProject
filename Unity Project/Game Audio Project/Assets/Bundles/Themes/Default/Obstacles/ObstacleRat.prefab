@@ -288,7 +288,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CollisionTag: 
-  Event: event:/Enemies/Mouse/Mouse-Roam
+  Event: event:/Enemies/Mouse/Mouse-Roam3D
   PlayEvent: 0
   StopEvent: 2
   AllowFadeout: 1

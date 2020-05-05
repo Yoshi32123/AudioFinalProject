@@ -35,6 +35,7 @@ public class CharacterCollider : MonoBehaviour
 	public AudioClip coinSound;
 	public StudioEventEmitter emitter;
 	public AudioClip premiumSound;
+	public MusicControl musicControl;
 
     public DeathEvent deathData { get { return m_DeathData; } }
     public new BoxCollider collider { get { return m_Collider; } }
@@ -167,6 +168,7 @@ public class CharacterCollider : MonoBehaviour
 			{
 				//m_Audio.PlayOneShot(controller.character.deathSound);
 				controller.character.deathEmitter.Play();
+				musicControl.GameToDeath();
 
 				m_DeathData.character = controller.character.characterName;
 				m_DeathData.themeUsed = controller.trackManager.currentTheme.themeName;

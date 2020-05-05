@@ -9,6 +9,7 @@ public class SettingPopup : MonoBehaviour
     public Slider masterSlider;
     public Slider musicSlider;
     public Slider masterSFXSlider;
+    public MusicControl musicControl;
 
     public LoadoutState loadoutState;
     public DataDeleteConfirmation confirmationPopup;
@@ -56,6 +57,8 @@ public class SettingPopup : MonoBehaviour
         m_MasterVolume = k_MinVolume * (1.0f - value);
         mixer.SetFloat(k_MasterVolumeFloatName, m_MasterVolume);
 		PlayerData.instance.masterVolume = m_MasterVolume;
+
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("MasterVolume", 1.0f - value);
     }
 
     public void MusicVolumeChangeValue(float value)
@@ -63,6 +66,8 @@ public class SettingPopup : MonoBehaviour
         m_MusicVolume = k_MinVolume * (1.0f - value);
         mixer.SetFloat(k_MusicVolumeFloatName, m_MusicVolume);
 		PlayerData.instance.musicVolume = m_MusicVolume;
+
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("MusicVolume", 1.0f - value);
     }
 
     public void MasterSFXVolumeChangeValue(float value)
@@ -70,5 +75,7 @@ public class SettingPopup : MonoBehaviour
         m_MasterSFXVolume = k_MinVolume * (1.0f - value);
         mixer.SetFloat(k_MasterSFXVolumeFloatName, m_MasterSFXVolume);
 		PlayerData.instance.masterSFXVolume = m_MasterSFXVolume;
+
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("SFXVolume", 1.0f - value);
     }
 }

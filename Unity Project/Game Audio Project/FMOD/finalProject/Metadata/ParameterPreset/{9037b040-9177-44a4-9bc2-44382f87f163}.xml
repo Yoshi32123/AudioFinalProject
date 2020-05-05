@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="ParameterPreset" id="{9037b040-9177-44a4-9bc2-44382f87f163}">
+		<property name="name">
+			<value>GameOverTransitions</value>
+		</property>
+		<relationship name="folder">
+			<destination>{597f5fb5-993f-4f8d-a958-dfe31df5bd75}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{615f78f1-740e-46b2-9ccd-c27aa1d9ca57}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{615f78f1-740e-46b2-9ccd-c27aa1d9ca57}">
+		<property name="parameterType">
+			<value>1</value>
+		</property>
+		<property name="maximum">
+			<value>3</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

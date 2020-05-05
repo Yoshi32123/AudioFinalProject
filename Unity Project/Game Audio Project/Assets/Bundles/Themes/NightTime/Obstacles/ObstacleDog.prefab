@@ -216,7 +216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CollisionTag: 
-  Event: event:/Enemies/Dog/Dog-Roam
+  Event: event:/Enemies/Dog/Dog-Roam3D
   PlayEvent: 0
   StopEvent: 0
   AllowFadeout: 1
