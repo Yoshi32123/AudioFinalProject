@@ -35,6 +35,7 @@ public class CharacterCollider : MonoBehaviour
 	public AudioClip coinSound;
 	public StudioEventEmitter emitter;
 	public AudioClip premiumSound;
+	public StudioEventEmitter premiumEmitter;
 	public MusicControl musicControl;
 
     public DeathEvent deathData { get { return m_DeathData; } }
@@ -116,7 +117,7 @@ public class CharacterCollider : MonoBehaviour
                 PlayerData.instance.premium += 1;
                 controller.premium += 1;
 				//m_Audio.PlayOneShot(premiumSound);
-				emitter.Play();
+				premiumEmitter.Play();
 			}
             else
             {

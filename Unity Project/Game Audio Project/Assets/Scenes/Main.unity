@@ -13928,6 +13928,7 @@ GameObject:
   - component: {fileID: 1144878499}
   - component: {fileID: 1144878500}
   - component: {fileID: 1144878501}
+  - component: {fileID: 1144878502}
   m_Layer: 0
   m_Name: CharacterSlot
   m_TagString: Untagged
@@ -14000,6 +14001,7 @@ MonoBehaviour:
   coinSound: {fileID: 8300000, guid: 62c15b4aac9d60e4a963f4f55d31e706, type: 3}
   emitter: {fileID: 1144878501}
   premiumSound: {fileID: 8300000, guid: 553f1d03da54003479f6ff63d3155919, type: 3}
+  premiumEmitter: {fileID: 1144878502}
   musicControl: {fileID: 838492414}
   magnetCoins: []
 --- !u!82 &1144878500
@@ -14113,6 +14115,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CollisionTag: 
   Event: event:/Pickups/Currency
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
+--- !u!114 &1144878502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1144878495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Pickups/Auras/ExtraLife
   PlayEvent: 0
   StopEvent: 0
   AllowFadeout: 1
